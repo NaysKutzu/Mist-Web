@@ -3,6 +3,17 @@ var fs = require('fs');
 
 const PORT=8080; 
 
+const express = require('express')
+const app = express()
+
+//root//
+app.get('/', (req, res) => {
+  res.sendStatus(200)
+})
+//app listne on port//
+app.listen(PORT, function () {
+  console.log(`Listening on port ${PORT}`)
+})
 fs.readFile('./index.html', function (err, html) {
 
     if (err) throw err;    
