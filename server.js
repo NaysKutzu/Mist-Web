@@ -1,16 +1,7 @@
-const http = require("http");
-const fs = require('fs').promises;
-
-const requestListener = function (req, res) {
-    fs.readFile(__dirname + "/index.html")
-        .then(contents => {
-            res.setHeader("Content-Type", "text/html");
-            res.writeHead(200);
-            res.end(contents);
-        })
-        .catch(err => {
-            res.writeHead(500);
-            res.end(err);
-            return;
-        });
-};
+const express = require('express');
+const app = express();
+const path = require('path');
+app.use('/html',(req,res,next)=>{
+res.sendFile(path.join(__dirname,'index.html');
+});
+app.listen(3000);
