@@ -19,6 +19,7 @@
   "homepage": "https://github.com/AshAritra/Mist-Web#readme",
   "dependencies": {
     "fs": "^0.0.1-security",
+    "express": "^4.18.2",
     "http": "^0.0.1-security"
   }
 }
